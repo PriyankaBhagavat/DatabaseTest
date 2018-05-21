@@ -1,7 +1,0 @@
-Replication setup on a windows server :  
-Server1 Settings ================ 1. Put the option file my.ini(C:\ProgramData\MySQL\MySQL Server 5.7) to Server1 with these settings: [mysqld] log-bin=mysql-bin server-id = 1 auto_increment_increment = 10 auto_increment_offset = 1  
-2. Configure the server: # create a user for replication process: create user replicant@'%' identified by 'password';  
-# Grant access rights: GRANT SELECT, PROCESS, FILE, SUPER, REPLICATION CLIENT, REPLICATION SLAVE, RELOAD ON *.* TO replicant@'%'; Flush Privileges;  
-# Specify the info for the serve2: CHANGE MASTER TO MASTER_HOST='ip_of_server2', MASTER_USER='replication_user_name_on_server2', MASTER_PASSWORD='replication_password_on_server2';  
-# Start the listerner: Start slave;  
-# Verify whether the replication is working: show 
