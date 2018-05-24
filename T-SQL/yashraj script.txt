@@ -1,0 +1,11 @@
+Create a script which will check daily log and data file growth for all the databases.
+Output table would be as :
+Column 1 : Database Name
+Column 2 : Files
+Column 3 : Size
+Column 4 : Size Difference (current - previous)
+column 5 : Created Date
+
+Schedule a job which will run daily having above script and configure a mail in next step 
+containing above details .  
+
